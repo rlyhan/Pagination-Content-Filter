@@ -83,6 +83,11 @@ function groupStudents(studentList, pageNum) {
   return groupsOfStudents[pageNum-1];
 }
 
+// create a search bar
+var str = '<input placeholder="Search for students..."><button>Search</button>';
+const $searchBar = $('<div class="student-search">' + str + '</div>');
+$('.page-header cf').append($searchBar);
+
 $('.student-search button').click(function() {
   // remove the 'No students found' message if present
   $("h3:contains('No students found')").remove();
